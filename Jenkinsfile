@@ -9,5 +9,9 @@ pipeline {
         sh 'mvn clean package'
       }
     }
+    stage ('Deploy') {
+       sh 'ssh ec2-user@ec2-52-47-100-247.eu-west-3.compute.amazonaws.com'
+       sh 'ls'
+    }
   }
 }
