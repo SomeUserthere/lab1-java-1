@@ -15,6 +15,7 @@ pipeline {
     }
     stage('Build') {
       steps {
+        sh 'id'
         sh 'docker build -t lab1-java-1/ .'
       }
     }
