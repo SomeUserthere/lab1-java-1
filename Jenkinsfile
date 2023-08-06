@@ -16,7 +16,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'id'
-        sh 'docker build -t lab1-java-1/ .'
+        sh 'docker build -t springboot/app1 .'
       }
     }
     stage('Login') {
@@ -26,7 +26,7 @@ pipeline {
     }
     stage('Push') {
       steps {
-        sh 'docker push springboot-app/lab1-java-1'
+        sh 'docker push springboot/app1'
       }
         }
       }
