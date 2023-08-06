@@ -6,13 +6,13 @@ pipeline {
    environment {
     DOCKERHUB_CREDENTIALS = credentials('DOCKERHUB')
   }
+    
   stages {
-    stage ('Build') {
+    stage ('test jar') {
       steps {
         sh 'mvn clean package'
       }
     }
-  stages {
     stage('Build') {
       steps {
         sh 'docker build -t lab1-java-1/ .'
@@ -30,4 +30,3 @@ pipeline {
         }
       }
   }
-}
