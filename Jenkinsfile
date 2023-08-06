@@ -28,4 +28,4 @@ pipeline {
         sh 'docker push springboot-app/lab1-java-1'
       }
   }
-}
+}}
